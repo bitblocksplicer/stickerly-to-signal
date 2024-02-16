@@ -54,7 +54,7 @@ async def upload_pack(stickerly_pack_id, pack_name, pack_author):
     print(f"\nPack uploaded!\nhttps://signal.art/addstickers/#pack_id={pack_id}&pack_key={pack_key}")
 
 
-pack_id = input()
+pack_id = input("Enter Sticker.ly Sticker Pack ID: ")
 pack_response = requests.get(f"http://api.sticker.ly/v3.1/stickerPack/{pack_id}")
 pack_info = pack_response.json()['result']
 base_url = pack_info['resourceUrlPrefix']
